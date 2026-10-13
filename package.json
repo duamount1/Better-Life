@@ -1,0 +1,1 @@
+{"name":"life-flashcards","version":"1.0.0","private":true,"type":"module","description":"HowToLiveBetter 人生闪卡","scripts":{"dev":"python3 -m http.server 4173 --bind 127.0.0.1 --directory dist","test":"node --test tests/*.test.mjs","sync":"python3 scripts/content_sync.py"}}

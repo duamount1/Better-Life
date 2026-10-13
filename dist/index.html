@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#f3f0e7">
+<meta name="description" content="687 张生活闪卡、34 个主题皮肤。翻卡，记录选择，点亮图鉴，生成你的生活探索报告。">
+<title>好好生活 · 人生闪卡</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="themes.css"><link rel="stylesheet" href="report.css"><link rel="stylesheet" href="layout.css"><link rel="stylesheet" href="card-table.css"><script type="module" src="app.js"></script></head>
+<body class="app-body">
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6"/></symbol>
+    <symbol id="i-flip" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M5.7 7a7 7 0 0 1 11.5-2L20 8M4 16l2.8 3A7 7 0 0 0 18.3 17"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3-5.6-3-5.6 3 1.1-6.3L3 9.6l6.3-.9Z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 1c1.6 6.6 4.4 9.4 11 11-6.6 1.6-9.4 4.4-11 11C10.4 16.4 7.6 13.6 1 12c6.6-1.6 9.4-4.4 11-11Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16M3 4c4-1 6 0 9 2 3-2 5-3 9-2v15c-4-1-6 0-9 2-3-2-5-3-9-2Z"/></symbol>
+    <symbol id="i-cards" viewBox="0 0 24 24"><rect x="7" y="3" width="13" height="18" rx="2"/><path d="M4 6H3v15a2 2 0 0 0 2 2h11M11 9h5M11 13h5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </defs></svg>
+
+
+<aside class="site-header app-sidebar" aria-label="应用导航">
+<a class="brand" href="./" aria-label="好好生活首页"><span class="brand-mark"><span></span><span></span><span></span><span></span></span><span>好好生活<small>Live Better</small></span></a>
+<nav class="desktop-nav" aria-label="主要导航"><button class="nav-item active" id="draw-nav" aria-current="page"><svg aria-hidden="true"><use href="#i-sparkle"/></svg><span class="nav-label">好好生活指南</span></button><button class="nav-item" id="atlas-nav"><svg aria-hidden="true"><use href="#i-book"/></svg><span class="nav-label">主题图鉴</span></button><button class="nav-item" id="library-nav"><svg aria-hidden="true"><use href="#i-cards"/></svg><span class="nav-label">我的卡册 <span id="nav-count">—</span></span></button><button class="nav-item" id="report-nav"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="nav-label">当前报告</span></button></nav>
+<button class="about-button" id="about-button" aria-label="关于与使用说明">?</button>
+</aside>
+<main class="app-shell">
+<section class="compact-scope" id="scope-hud" aria-label="当前主题与进度">
+<button class="theme-switch" id="atlas-toggle" aria-haspopup="dialog" aria-controls="atlas-dialog"><span class="scope-emblem" id="scope-emblem" aria-hidden="true">✦</span><span class="scope-choice"><strong id="scope-name">全部主题</strong><small id="scope-counts">687 张 · 看过 0 · 已选 0</small></span><svg><use href="#i-chevron"/></svg></button>
+<div class="scope-progress"><span id="scope-progress-text">探索 0%</span><div class="scope-progress-track"><div id="scope-progress-bar"></div></div><span class="scope-gold" id="scope-gold">✦ 0 / 34</span></div>
+</section>
+<section class="workspace" aria-label="人生闪卡"><div class="deck-column">
+<div class="card-stage" id="card-stage"><div class="stack-sheet sheet-one"></div><div class="stack-sheet sheet-two"></div>
+<div class="card-inner" id="card-inner">
+<button class="card-face card-front" id="card-front" aria-label="翻开卡片，查看建议">
+<div class="card-top"><span class="category-pill" id="front-category">生活探索</span><span class="card-number" id="front-number">— / —</span></div>
+<div class="front-content"><div class="card-art" id="card-art" aria-hidden="true">✦</div><span class="card-series" id="card-series">LIFE QUEST</span><div class="card-flags" id="front-flags"></div><h2 id="card-question">正在打开你的生活卡册…</h2></div>
+<div class="card-bottom"><span class="card-code" id="card-code">CHAPTER —</span><span class="flip-call"><svg><use href="#i-flip"/></svg> 翻开卡牌</span><span class="card-rarity" id="card-rarity">LIFE</span></div>
+</button>
+<section class="card-face card-back" id="card-back" aria-label="卡片建议" inert>
+<div class="card-top"><span class="category-pill" id="back-category"></span><button class="back-flip" id="back-flip" aria-label="翻回卡片正面"><svg><use href="#i-flip"/></svg><span>翻回正面</span></button></div>
+<div class="back-content" tabindex="0" aria-label="卡片详细说明，可向下滚动"><div class="card-flags" id="back-flags"></div><h2 id="answer-title"></h2><div class="answer-text" id="answer-text"></div><div class="answer-note" id="answer-note"></div><div class="facts" id="card-facts"></div><details class="sources"><summary>依据与原文 <span id="evidence-badge"></span><svg><use href="#i-chevron"/></svg></summary><div id="source-links"></div></details></div>
+</section>
+</div></div>
+<div class="decision-panel" role="group" aria-label="选择当前卡片的状态">
+<label class="decision-option declined-option"><input id="declined-check" type="checkbox"><span class="checkbox-art"></span><span>不同意 / 不想做 / 用不到</span></label>
+<label class="decision-option done-option"><input id="done-check" type="checkbox"><span class="checkbox-art"></span><span>做到了</span></label>
+<button id="todo-button" class="decision-option todo-option" type="button" aria-pressed="false"><svg><use href="#i-plus"/></svg><span>加入todo</span></button>
+</div>
+<div class="card-actions"><button class="icon-button" id="previous" aria-label="回看上一张"><svg><use href="#i-left"/></svg></button><button class="flip-button" id="flip-button"><svg><use href="#i-flip"/></svg><span>翻开卡牌</span></button><button class="next-button" id="next">下一张 <svg><use href="#i-arrow"/></svg></button><button class="icon-button favorite" id="favorite" aria-label="收藏当前卡片" aria-pressed="false"><svg><use href="#i-star"/></svg></button></div>
+
+</div></section>
+</main>
+<nav class="mobile-tabs" aria-label="页面导航"><button id="mobile-draw-nav" class="active" aria-current="page"><svg><use href="#i-flip"/></svg><span>好好生活指南</span></button><button id="mobile-atlas-nav"><svg><use href="#i-book"/></svg><span>图鉴</span></button><button id="mobile-library-nav"><svg><use href="#i-cards"/></svg><span>卡册</span></button><button id="mobile-report-nav"><svg><use href="#i-star"/></svg><span>报告</span></button></nav>
+<dialog id="atlas-dialog" class="panel-dialog atlas-dialog" aria-labelledby="atlas-title"><div class="dialog-heading"><div><h2 id="atlas-title">选择你的卡组 <span id="atlas-gold-count">0 / 34</span></h2></div><button class="icon-button" id="close-atlas" aria-label="返回好好生活指南"><svg><use href="#i-left"/></svg></button></div><div class="atlas-summary"><button class="all-scope active" id="all-scope" aria-pressed="true"><span class="all-emblem" aria-hidden="true">✦</span><span>全部主题<small id="atlas-total">687 张</small></span></button><p class="atlas-summary-text" id="atlas-summary-text">看过 0 张 · 已选 0 张</p></div><div class="atlas-grid" id="atlas-grid"></div></dialog>
+<dialog id="library-dialog" class="library-dialog"><div class="dialog-heading"><div><h2 id="library-title">我的生活卡册</h2></div><button class="icon-button" id="close-library" aria-label="返回好好生活指南"><svg><use href="#i-left"/></svg></button></div><div class="library-controls"><div class="search-wrap"><svg><use href="#i-search"/></svg><input id="library-search" type="search" placeholder="搜索一个生活问题或关键词" aria-label="搜索卡片"></div><select id="library-filter" aria-label="筛选卡片状态"><option value="all">全部卡片</option><option id="pending-filter-option" value="pending">未选择</option><option id="todo-filter-option" value="todo">todo</option><option id="done-filter-option" value="done">做到了</option><option id="declined-filter-option" value="declined">暂不采用</option><option id="saved-filter-option" value="saved">我的收藏</option></select></div><p class="library-count" id="library-count"></p><div id="library-list" class="library-list"></div></dialog>
+<dialog id="report-dialog" class="report-dialog"></dialog>
+  <dialog id="about-dialog" class="about-dialog"><div class="dialog-heading"><h2>关于这副卡片</h2><button class="icon-button" id="close-about" aria-label="返回好好生活指南"><svg><use href="#i-left"/></svg></button></div><div class="about-content"><p>原作是 eternity4719 与社区贡献者维护的 <a href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener noreferrer">HowToLiveBetter 高性价比人生指南</a>。这里将正文中每条建议拆成独立闪卡，保留「说人话」、备注、成本、收益、证据等级和来源，改变了展示方式。</p><p id="source-description"></p><p>每个主题都有独立的抽卡进度。可以选择暂不采用、做到了，或加入 todo。todo 记录待办；做到了与暂不采用的卡片在下轮跳过。该主题全部卡片都标记为做到了或暂不采用后，图鉴金标点亮。回看与收藏不改变本轮覆盖数。</p><p>证据等级沿用原作：A 为有具体数字可查的荟萃分析、大型队列或随机试验；法律政策条目表示引用到法条或官方原文，可核查不等于因果。B 为有研究支持但没有确切数字，或只有小样本、单项研究。C 为作者经验或公认做法，缺少直接研究文献。原作的「争议」和「待核实」标记会单独显示。</p><p>内容依据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> 改编。<a href="CONTENT-LICENSE.txt" target="_blank" rel="noopener noreferrer">查看内容许可</a> · <a href="cards.json" download>下载全部卡片数据</a> · <a href="life-flashcards-source.zip" download>下载网页源码</a></p><p class="about-muted">进度、选择、收藏和报告名字只保存在此浏览器。清除浏览器数据后会重置。好好生活指数 =（看过比例 × 30% + 做到比例 × 70%）× 100，只记录卡片进展。</p><p id="storage-note">选择、进度、收藏与报告名字，自动保存在此浏览器。</p><p>快捷键：空格翻卡，左右方向键切换，S 收藏。</p></div></dialog>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div><div id="card-announcement" class="sr-only" role="status" aria-live="polite"></div><noscript><p class="noscript">请启用 JavaScript，或阅读 <a href="https://github.com/eternity4719/HowToLiveBetter">原指南</a>。</p></noscript>
+</body></html>

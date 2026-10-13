@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* A paper-and-metal collection. Theme variables follow the card into the atlas. */
+.card-stage,.atlas-tile{--theme-color:#557654;--theme-light:#e9eedc;--theme-dark:#2c4535;--foil:#bcaa73;--foil-bright:#f3e4b4;--skin-grain:repeating-linear-gradient(45deg,#fff3 0 1px,transparent 1px 5px)}
+.card-stage{isolation:isolate;margin:0 0 28px;filter:drop-shadow(0 16px 18px #263b2810)}
+.card-stage .stack-sheet{border:1px solid var(--theme-color);border-radius:21px;background:var(--theme-light);box-shadow:inset 0 0 0 4px #fff8,inset 0 0 0 5px #b2b99b}
+.card-stage .sheet-one{transform:translate(9px,12px) rotate(1.8deg);background:linear-gradient(120deg,#e0e4d2,var(--theme-light))}
+.card-stage .sheet-two{transform:translate(-5px,7px) rotate(-.8deg);background:linear-gradient(120deg,#f7f2e2,var(--theme-light))}
+.card-stage .card-face{border:1px solid var(--theme-dark);border-radius:20px;background:linear-gradient(135deg,#fff9ee 0%,var(--theme-light) 52%,#fff8e6 100%);box-shadow:inset 0 0 0 5px var(--theme-light),inset 0 0 0 6px var(--theme-color),inset 0 0 0 9px #ffffff59,0 6px 20px #24382b15;color:var(--theme-dark)}
+.card-stage .card-face::before{content:"";position:absolute;inset:11px;border:1px solid var(--theme-color);border-radius:12px;opacity:.42;pointer-events:none;background:radial-gradient(circle at 0 0,var(--theme-color) 0 2px,transparent 3px),radial-gradient(circle at 100% 0,var(--theme-color) 0 2px,transparent 3px),radial-gradient(circle at 0 100%,var(--theme-color) 0 2px,transparent 3px),radial-gradient(circle at 100% 100%,var(--theme-color) 0 2px,transparent 3px)}
+.card-stage .card-face::after{content:"";position:absolute;inset:0;z-index:0;background:var(--skin-grain);opacity:.36;pointer-events:none}
+.card-stage .card-front{background:radial-gradient(ellipse at 50% 18%,#ffffffe8,transparent 45%),radial-gradient(ellipse at 50% 110%,var(--theme-color),transparent 62%),linear-gradient(130deg,#fff8e6,var(--theme-light) 50%,#f7efdf);background-blend-mode:normal,soft-light,normal}
+.card-stage .card-top{position:relative;padding:25px 29px 0;z-index:1}
+.card-stage .category-pill{padding:6px 10px;border:1px solid var(--theme-color);border-radius:3px;background:#fffaf172;color:var(--theme-dark);font-size:10px;font-weight:650;letter-spacing:.5px;box-shadow:inset 0 0 0 2px #fff7;line-height:1.4}
+.card-stage .card-number{color:var(--theme-dark);font-size:9px;letter-spacing:1.7px;opacity:.62}
+.card-stage .front-content{padding:14px 43px 18px;gap:11px;position:relative;z-index:1}
+.card-stage .front-content::before,.card-stage .front-content::after{content:"✦";position:absolute;top:50%;font-size:15px;color:var(--theme-color);opacity:.5}
+.card-stage .front-content::before{left:25px}.card-stage .front-content::after{right:25px}
+.card-stage .card-art{position:relative;flex-shrink:0;width:68px;height:68px;display:grid;place-items:center;color:var(--theme-dark);border:1px solid var(--theme-color);border-radius:50%;box-shadow:inset 0 0 0 4px var(--theme-light),inset 0 0 0 5px var(--theme-color),0 2px 8px #2935290c;background:radial-gradient(circle,#fff9e7 15%,var(--theme-light) 70%);margin:0 auto 2px}
+.card-stage .card-art::before{content:"";position:absolute;width:81px;height:81px;border-radius:50%;border:1px dashed var(--theme-color);opacity:.35;transform:rotate(12deg)}
+.card-stage .card-art::after{content:"✧";position:absolute;right:-13px;top:2px;font-size:14px;color:var(--theme-color);background:var(--theme-light);line-height:1}
+.card-stage .card-art svg{width:37px;height:37px;stroke-width:1.65;overflow:visible}
+.card-stage .card-series{font-size:9px;font-weight:650;letter-spacing:2.5px;color:var(--theme-color);line-height:1.5}
+.card-stage .card-kicker{font-size:9px;letter-spacing:1.8px;color:var(--theme-color)}
+.card-stage .front-content h2{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1.6;letter-spacing:1px;color:var(--theme-dark);max-width:580px;text-wrap:pretty;margin:0;position:relative}
+.card-stage .front-content h2.long-title{font-size:25px;line-height:1.65}
+.card-stage .front-content h2.extra-long-title{font-size:21px;line-height:1.7;letter-spacing:.6px}
+.card-stage .tiny-flower{display:none}
+.card-stage .card-bottom{position:relative;z-index:1;padding:16px 0 18px;margin:0 29px;border-top:1px solid var(--theme-color);color:var(--theme-dark);font-size:9px;letter-spacing:.5px;opacity:.84}
+.card-stage .card-bottom::before{content:"◆";position:absolute;top:-5px;left:50%;transform:translateX(-50%);font-size:8px;background:var(--theme-light);padding:0 10px;line-height:1;color:var(--theme-color)}
+.card-stage .flip-call{color:var(--theme-dark);font-weight:600}
+.card-stage .card-code{font-family:Georgia,serif;font-size:9px;letter-spacing:1.8px;color:var(--theme-dark);white-space:nowrap;opacity:.65}
+.card-stage .card-rarity{font-size:8px;letter-spacing:1.8px;color:var(--theme-color);font-weight:700}
+.card-stage .card-flags{gap:5px;font-size:9px;margin:0;max-width:100%}
+.card-stage .audience-flag{background:#ffffff63;border:1px solid #ffffff70;color:var(--theme-dark);border-radius:3px;padding:2px 6px;opacity:.8}
+.card-stage .status-flag{border-radius:3px;background:#f4e8c5;color:#806439;padding:2px 6px}
+.card-stage .card-back{padding-bottom:27px;background:linear-gradient(160deg,#fff9ec,var(--theme-light));min-height:394px}
+.card-stage .card-back .card-top{padding-bottom:8px}
+.card-stage .back-flip{color:var(--theme-dark)}
+.card-stage .back-content{position:relative;z-index:1;padding:13px 30px 0}
+.card-stage .back-content .card-kicker{font-size:8px;letter-spacing:2px;margin:0 0 8px}
+.card-stage .back-content h2{color:var(--theme-dark);font-size:23px;font-weight:600;line-height:1.6}
+.card-stage .answer-text{color:var(--theme-dark);font-size:14px;line-height:1.95}
+.card-stage .answer-note{background:#fff9ed91;border-left:2px solid var(--theme-color);color:var(--theme-dark);font-size:12px;border-radius:0 3px 3px 0}
+.card-stage .note-label,.card-stage .fact-label{color:var(--theme-dark)}
+.card-stage .facts{color:var(--theme-dark);opacity:.79}
+.card-stage .sources{border-color:var(--theme-color);opacity:.82}
+.card-stage .sources summary{color:var(--theme-dark)}
+.card-stage #evidence-badge{background:#ffffff75;color:var(--theme-dark)}
+.card-stage #source-links a{text-decoration-color:var(--theme-color)}
+
+/* Each series carries an individual woven or engraved pattern. */
+[data-series="守护之章"]{--skin-grain:repeating-linear-gradient(120deg,#fff5 0 1px,transparent 1px 8px)}
+[data-series="秩序之章"]{--skin-grain:repeating-linear-gradient(45deg,#fff5 0 1px,transparent 1px 7px),repeating-linear-gradient(-45deg,#fff4 0 1px,transparent 1px 7px)}
+[data-series="契约之章"]{--skin-grain:repeating-linear-gradient(0deg,#fff5 0 1px,transparent 1px 12px),repeating-linear-gradient(90deg,#fff5 0 1px,transparent 1px 12px)}
+[data-series="同行之章"]{--skin-grain:radial-gradient(circle,#fff7 1px,transparent 1.5px) 0 0 / 10px 10px}
+[data-series="经营之章"]{--skin-grain:repeating-linear-gradient(90deg,#fff4 0 1px,transparent 1px 6px)}
+[data-series="远行之章"]{--skin-grain:repeating-radial-gradient(circle at 50% 50%,#fff4 0 1px,transparent 1px 14px)}
+.card-stage[data-series="秩序之章"] .card-art{border-radius:16px;transform:rotate(45deg);width:59px;height:59px;margin-top:7px;margin-bottom:9px;box-shadow:inset 0 0 0 4px var(--theme-light),inset 0 0 0 5px var(--theme-color)}
+.card-stage[data-series="秩序之章"] .card-art svg{transform:rotate(-45deg)}
+.card-stage[data-series="秩序之章"] .card-art::before{width:72px;height:72px;border-radius:18px;transform:none}
+.card-stage[data-series="秩序之章"] .card-art::after{display:none}
+.card-stage[data-series="契约之章"] .card-art{border-radius:14px 14px 24px 24px}
+.card-stage[data-series="契约之章"] .card-art::before{border-radius:19px 19px 30px 30px}
+.card-stage[data-series="经营之章"] .card-art{border-radius:12px}
+.card-stage[data-series="经营之章"] .card-art::before{border-radius:18px}
+
+/* Atlas buttons are small chapter covers, with an illuminated foil completion seal. */
+.atlas-tile{position:relative;min-width:0;isolation:isolate;border:1px solid var(--theme-color);border-radius:9px;padding:16px 13px 12px;color:var(--theme-dark);background:linear-gradient(140deg,#fff7e7,var(--theme-light));box-shadow:inset 0 0 0 3px #ffffff6b,inset 0 0 0 4px var(--theme-color),0 2px 6px #31453308;text-align:left;display:flex;flex-direction:column;gap:10px;transition:transform .18s,box-shadow .18s}
+.atlas-tile::before{content:"";position:absolute;inset:7px;border:1px solid var(--theme-color);border-radius:5px;opacity:.2;pointer-events:none;background:var(--skin-grain)}
+.atlas-tile:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 3px #fff9,inset 0 0 0 4px var(--theme-color),0 5px 14px #2a413718}
+.atlas-tile.active,.atlas-tile[aria-pressed="true"],.atlas-tile[aria-current="true"]{outline:2px solid var(--theme-dark);outline-offset:3px;box-shadow:inset 0 0 0 3px #fff9,inset 0 0 0 4px var(--theme-color),0 5px 14px #2a413718}
+.atlas-emblem{position:relative;z-index:1;width:43px;height:43px;display:grid;place-items:center;border:1px solid var(--theme-color);border-radius:50%;background:#fff9e782;box-shadow:inset 0 0 0 3px var(--theme-light),inset 0 0 0 4px #fff9;color:var(--theme-dark);flex-shrink:0}
+.atlas-emblem svg{width:26px;height:26px;stroke-width:1.6}
+.atlas-tile-head{position:relative;z-index:1;display:flex;align-items:center;gap:8px;min-height:43px;padding-right:20px}
+.atlas-tile .atlas-chapter{font-size:9px;letter-spacing:1px;line-height:1.6;color:var(--theme-dark);opacity:.55;font-family:Georgia,serif;white-space:nowrap}
+.atlas-tile h3,.atlas-tile h4,.atlas-tile .atlas-name{position:relative;color:var(--theme-dark);font-size:12px;line-height:1.65;font-weight:600;margin:0;letter-spacing:.15px;overflow-wrap:anywhere}
+.atlas-tile .atlas-series{font-size:8px;letter-spacing:1.3px;color:var(--theme-color);line-height:1.5}
+.atlas-tile .atlas-code,.atlas-tile .atlas-number{font-size:9px;letter-spacing:1.4px;color:var(--theme-dark);opacity:.55;font-family:Georgia,serif}
+.atlas-tile .atlas-stats,.atlas-tile .atlas-meta,.atlas-tile .atlas-counts{display:flex;justify-content:space-between;align-items:center;gap:6px;position:relative;font-size:9px;color:var(--theme-dark);line-height:1.5;font-variant-numeric:tabular-nums;opacity:.8;margin-top:auto}
+.atlas-mini-progress{display:block;position:relative;height:4px;background:#ffffff8c;border:1px solid #ffffff60;border-radius:4px;overflow:hidden;margin-top:0}
+.atlas-mini-progress>span,.atlas-mini-progress>i,.atlas-mini-progress>div{display:block;height:100%;min-height:2px;background:var(--theme-color);border-radius:4px;transition:width .25s}
+.atlas-gold{position:absolute;right:0;top:0;width:23px;height:23px;border-radius:50%;display:grid;place-items:center;color:var(--theme-color);border:1px solid var(--theme-color);background:#ffffff59;font-size:13px;font-weight:700;z-index:2;opacity:.26}
+.atlas-gold.is-lit,.atlas-tile.is-gold .atlas-gold,.atlas-tile.is-complete .atlas-gold{color:#947830;border-color:#c2a662;box-shadow:0 0 0 2px #fffb,0 2px 8px #b59e3740;background:radial-gradient(circle at 30% 25%,#fff2bf,#d8b25a 72%);opacity:1}
+.atlas-gold[hidden]{display:none}
+.atlas-gold svg{width:14px;height:14px;stroke-width:2}
+.atlas-tile.is-complete,.atlas-tile.is-gold,.atlas-tile[data-complete="true"]{border-color:#b89b55;background:linear-gradient(135deg,#fff5d6,var(--theme-light) 65%,#f6e8b9);box-shadow:inset 0 0 0 3px #fff2cc,inset 0 0 0 4px #c1a055,0 2px 9px #b1923520}
+.atlas-tile.is-complete .atlas-emblem,.atlas-tile.is-gold .atlas-emblem,.atlas-tile[data-complete="true"] .atlas-emblem{color:#957d3b;border-color:#b89b55;background:linear-gradient(135deg,#fff5d4,#e4d2a3);box-shadow:inset 0 0 0 3px #f5eaca,inset 0 0 0 4px #b89b55}
+.atlas-tile.is-complete .atlas-mini-progress>span,.atlas-tile.is-gold .atlas-mini-progress>span,.atlas-tile[data-complete="true"] .atlas-mini-progress>span{background:linear-gradient(90deg,#bc9e52,#e6c881)}
+
+@media(min-width:1500px){.card-stage .front-content{gap:13px}.card-stage .card-art{width:74px;height:74px}.card-stage .card-art::before{width:87px;height:87px}.card-stage .card-art svg{width:41px;height:41px}}
+@media(max-width:1000px){.card-stage .front-content{padding:13px 35px 17px;gap:10px}.card-stage .card-art{width:61px;height:61px}.card-stage .card-art::before{width:72px;height:72px}.card-stage .card-art svg{width:33px;height:33px}.card-stage .front-content h2{font-size:27px}.card-stage .front-content h2.long-title{font-size:23px}.card-stage .front-content h2.extra-long-title{font-size:20px}}
+@media(max-width:760px){.card-stage .card-face{border-radius:18px}.card-stage .card-top{padding:24px 27px 0}.card-stage .front-content{padding:13px 36px 16px;gap:10px}.card-stage .card-art{width:57px;height:57px}.card-stage .card-art::before{width:68px;height:68px}.card-stage .card-art svg{width:31px;height:31px}.card-stage .front-content h2{font-size:27px}.card-stage .front-content h2.long-title{font-size:23px}.card-stage .front-content h2.extra-long-title{font-size:20px}.card-stage .card-bottom{padding:15px 0 17px;margin:0 27px}.card-stage[data-series="秩序之章"] .card-art{width:50px;height:50px;border-radius:14px}.card-stage[data-series="秩序之章"] .card-art::before{width:62px;height:62px;border-radius:16px}.atlas-tile{padding:14px 12px 11px;gap:8px}.atlas-emblem{width:39px;height:39px}.atlas-emblem svg{width:25px;height:25px}}
+@media(max-width:440px){.card-stage .card-top{padding:23px 25px 0;gap:8px}.card-stage .category-pill{font-size:8px;padding:5px 7px;max-width:75%;letter-spacing:.2px}.card-stage .card-number{font-size:8px;letter-spacing:.6px}.card-stage .front-content{padding:12px 28px 15px;gap:9px}.card-stage .front-content::before{left:17px;font-size:10px}.card-stage .front-content::after{right:17px;font-size:10px}.card-stage .card-art{width:51px;height:51px;margin-bottom:1px}.card-stage .card-art::before{width:62px;height:62px}.card-stage .card-art svg{width:29px;height:29px}.card-stage .card-art::after{font-size:12px;right:-10px;top:0}.card-stage .card-series{font-size:8px;letter-spacing:2px}.card-stage .card-kicker{font-size:8px;letter-spacing:1.3px}.card-stage .front-content h2{font-size:25px;line-height:1.58;letter-spacing:.5px}.card-stage .front-content h2.long-title{font-size:21px}.card-stage .front-content h2.extra-long-title{font-size:18px;line-height:1.66}.card-stage .card-bottom{margin:0 25px;font-size:8px;padding:14px 0 16px}.card-stage .card-code{font-size:8px;letter-spacing:1.1px}.card-stage .card-rarity{font-size:7px;letter-spacing:1px}.card-stage .back-content{padding:13px 25px 0}.card-stage .back-content h2{font-size:21px}.card-stage .answer-text{font-size:13px}.card-stage .answer-note{font-size:11px}.card-stage[data-series="秩序之章"] .card-art{width:45px;height:45px;border-radius:12px;margin-top:5px;margin-bottom:7px}.card-stage[data-series="秩序之章"] .card-art::before{width:57px;height:57px;border-radius:14px}.atlas-tile{padding:13px 11px 11px}.atlas-tile h3,.atlas-tile h4,.atlas-tile .atlas-name{font-size:11px}.atlas-tile .atlas-stats,.atlas-tile .atlas-meta,.atlas-tile .atlas-counts{font-size:8px}.atlas-gold{width:21px;height:21px}}
+@media(prefers-reduced-motion:reduce){.atlas-tile,.atlas-mini-progress>span,.atlas-mini-progress>i,.atlas-mini-progress>div{transition:none}.atlas-tile:hover{transform:none}}

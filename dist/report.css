@@ -1,0 +1,128 @@
+.report-dialog {
+  --report-green: #244537;
+  --report-gold: #a3813c;
+  --report-muted: #788172;
+  --report-line: #e1d9c3;
+  width: min(930px, calc(100vw - 40px));
+  max-width: 930px;
+  max-height: min(900px, 90dvh);
+  padding: 0;
+  border: 1px solid #bfb797;
+  border-radius: 22px;
+  background: #f8f5eb;
+  color: var(--report-green);
+  box-shadow: 0 28px 100px #17372d45;
+  overflow: auto;
+  font-family: var(--sans, "PingFang SC", "Microsoft YaHei", sans-serif);
+}
+.report-dialog::backdrop { background: #142e28a6; backdrop-filter: blur(7px); }
+.report-dialog *, .report-dialog *::before, .report-dialog *::after { box-sizing: border-box; }
+.report-sheet { padding: 32px 36px 26px; background: radial-gradient(ellipse at 95% 0%, #efe3c955, transparent 38%); }
+.report-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.report-title { font-family: var(--serif, "Songti SC", serif); font-size: 30px; letter-spacing: 1px; font-weight: 600; margin: 0; line-height: 1.4; }
+.report-close { background: #ffffff65; border: 1px solid #ddd5bd; color: #6b7966; width: 35px; height: 35px; border-radius: 50%; font-size: 25px; line-height: 1; flex-shrink: 0; cursor: pointer; display: grid; place-items: center; padding: 0; }
+.report-close:hover { background: #eee8d6; color: var(--report-green); }
+.report-context { margin: 12px 0 0; color: #87917c; font-size: 10px; line-height: 1.7; }
+.report-identity { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 24px 0 26px; padding: 15px 18px; border: 1px solid var(--report-line); border-radius: 10px; background: #fffdf55e; }
+.report-name-label { font-size: 11px; color: #65735e; white-space: nowrap; }
+.report-name-input { background: #fffef9; border: 1px solid #d6cdb1; border-radius: 6px; color: var(--report-green); height: 36px; width: 220px; max-width: 100%; padding: 0 11px; font-size: 12px; font-family: inherit; }
+.report-name-input::placeholder { color: #a5ac98; }
+.report-overview { display: grid; grid-template-columns: 192px 1fr; gap: 30px; align-items: center; padding: 2px 8px 25px; }
+.report-index-ring { --report-angle: 0deg; width: 184px; height: 184px; padding: 9px; border-radius: 50%; background: conic-gradient(from 0deg, #b69246 var(--report-angle), #e9e3d0 var(--report-angle)); box-shadow: 0 0 0 6px #f3eee1, 0 0 0 7px #e2d7ba; }
+.report-index-center { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 50%; background: #fffdf5; box-shadow: inset 0 0 30px #efe6cf33; }
+.report-index-value { font-family: Georgia, "Times New Roman", serif; font-size: 63px; font-weight: 400; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -3px; color: var(--report-green); margin: 0 0 8px; }
+.report-index-label { font-family: var(--serif, "Songti SC", serif); color: #88743f; font-size: 13px; letter-spacing: 1px; }
+.report-index-outof { font-size: 8px; color: #b2a586; letter-spacing: 2px; margin-top: 7px; }
+.report-player-name { font-size: 11px; color: #9b834b; margin: 0 0 11px; overflow-wrap: anywhere; }
+.report-headline { font-family: var(--serif, "Songti SC", serif); font-size: 23px; line-height: 1.65; font-weight: 500; margin: 0 0 9px; }
+.report-description { font-size: 12px; color: #78846d; margin: 0; line-height: 1.9; }
+.report-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0 0 29px; }
+.report-stat { border: 1px solid #e4dcc5; border-radius: 10px; padding: 16px 15px 13px; background: #fffdf5; display: flex; flex-direction: column; gap: 8px; }
+.report-stat-label { font-size: 10px; color: #818971; }
+.report-stat-value { font-family: Georgia, "Times New Roman", serif; font-size: 29px; font-weight: 400; line-height: 1; color: #405d44; font-variant-numeric: tabular-nums; }
+.report-stat-goldCount { background: #f8efdc; border-color: #e2cf9e; }
+.report-stat-goldCount .report-stat-value { color: #a07d33; }
+.report-topics { border-top: 1px solid var(--report-line); padding-top: 23px; }
+.report-topics-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.report-topics-heading h3 { font-family: var(--serif, "Songti SC", serif); font-size: 21px; font-weight: 500; margin: 0; }
+.report-gold-summary { color: #aa883f; font-size: 10px; white-space: nowrap; padding: 6px 9px; border: 1px solid #e5d9b9; border-radius: 5px; background: #f5eedb; }
+.report-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 14px 0 18px; font-size: 9px; color: #919883; }
+.report-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.report-legend span::before { content: ''; width: 7px; height: 7px; border-radius: 2px; background: #e8e4d5; }
+.report-legend .report-legend-done::before { background: #547254; }
+.report-legend .report-legend-declined::before { background: #b7b5a7; }
+.report-topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
+.report-topic { display: flex; align-items: flex-start; gap: 11px; padding: 14px; border: 1px solid #e3ddca; border-radius: 10px; background: #fffdf6; min-width: 0; }
+.report-topic.is-gold { border-color: #c9ab63; background: linear-gradient(115deg, #fffdf6 65%, #fbefd54f); box-shadow: inset 0 0 0 1px #e8d9ad33; }
+.report-topic-symbol { width: 32px; height: 34px; flex-shrink: 0; border-radius: 7px; display: grid; place-items: center; color: var(--report-topic-color, #416650); background: var(--report-topic-light, #e6eee5); font-size: 18px; line-height: 1; }
+.report-topic-symbol > svg { display: block; width: 24px; height: 24px; overflow: visible; }
+.report-topic-content { min-width: 0; flex: 1; }
+.report-topic-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.report-topic-name { margin: 0; color: #516447; font-size: 11px; font-weight: 550; line-height: 1.6; overflow-wrap: anywhere; }
+.report-topic-badge { font-size: 8px; color: #aaa890; line-height: 1.65; white-space: nowrap; font-variant-numeric: tabular-nums; padding-top: 1px; }
+.report-topic-badge.earned { color: #a17c2b; font-weight: 600; letter-spacing: .5px; }
+.report-topic-caption { font-size: 8px; line-height: 1.6; color: #909b80; margin: 6px 0 8px; font-variant-numeric: tabular-nums; }
+.report-topic-track { display: flex; height: 4px; width: 100%; background: #eae6d8; border-radius: 4px; overflow: hidden; }
+.report-topic-done { background: var(--report-topic-color, #416650); }
+.report-topic-declined { background: #b7b5a7; }
+.report-footer { display: block; margin: 24px 0 0; padding: 18px 0 0; border: 0; border-top: 1px solid var(--report-line); max-width: none; }
+.report-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.report-actions button { min-height: 40px; padding: 0 18px; font-family: inherit; font-size: 11px; font-weight: 500; border-radius: 7px; cursor: pointer; }
+.report-actions .report-download { background: #fffdf5; border: 1px solid #d8cfb6; color: #7d805f; }
+.report-actions .report-download:hover { background: #eee8d6; }
+.report-actions .report-continue { background: var(--report-green); border: 1px solid var(--report-green); color: #fffdf0; }
+.report-actions .report-continue:hover { background: #355e49; }
+.report-download-status { display: block; font-size: 9px; color: #858e74; line-height: 1.8; text-align: right; margin-top: 10px; }
+.report-download-status:empty { display: none; }
+.report-dialog button:focus-visible, .report-name-input:focus-visible { outline: 2px solid #9a7d3c; outline-offset: 3px; }
+@media (max-width: 700px) {
+  .report-dialog { width: calc(100vw - 24px); max-height: 93dvh; border-radius: 15px; }
+  .report-sheet { padding: 25px 22px 22px; }
+  .report-title { font-size: 25px; }
+  .report-context { font-size: 9px; }
+  .report-identity { gap: 8px 12px; margin: 19px 0 26px; padding: 12px; }
+  .report-name-label { width: 100%; font-size: 10px; }
+  .report-name-input { flex: 1; min-width: 120px; font-size: 16px; }
+  .report-overview { grid-template-columns: 145px 1fr; gap: 19px; padding: 0 3px 24px; }
+  .report-index-ring { width: 138px; height: 138px; padding: 7px; }
+  .report-index-value { font-size: 47px; }
+  .report-index-label { font-size: 10px; }
+  .report-index-outof { font-size: 7px; margin-top: 5px; }
+  .report-player-name { font-size: 10px; margin-bottom: 7px; }
+  .report-headline { font-size: 18px; margin-bottom: 6px; }
+  .report-description { font-size: 10px; }
+  .report-stats { gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .report-stat { padding: 13px; gap: 7px; }
+  .report-stat-value { font-size: 26px; }
+  .report-topic-list { grid-template-columns: 1fr; }
+  .report-topic { padding: 13px; }
+  .report-topic-name { font-size: 12px; }
+  .report-topic-caption { font-size: 9px; }
+  .report-topics-heading h3 { font-size: 20px; }
+  .report-gold-summary { font-size: 9px; }
+}
+@media (max-width: 430px) {
+  .report-sheet { padding: 23px 17px 20px; }
+  .report-title { font-size: 22px; }
+  .report-close { width: 31px; height: 31px; font-size: 23px; }
+  .report-overview { display: flex; flex-direction: column; text-align: center; gap: 22px; }
+  .report-index-ring { width: 155px; height: 155px; }
+  .report-index-value { font-size: 54px; }
+  .report-index-label { font-size: 11px; }
+  .report-headline { font-size: 21px; }
+  .report-description { max-width: 300px; font-size: 11px; }
+  .report-actions { justify-content: stretch; }
+  .report-actions button { flex: 1; padding: 0 10px; }
+  .report-topic-heading { gap: 6px; }
+}
+@media print {
+  body:has(.report-dialog[open]) > *:not(.report-dialog) { display: none !important; }
+  .report-dialog[open] { position: static; width: 100%; max-width: none; max-height: none; overflow: visible; box-shadow: none; border: 0; background: #fff; margin: 0; color: #203c30; }
+  .report-dialog::backdrop { background: transparent; }
+  .report-sheet { padding: 12px; background: none; }
+  .report-close, .report-identity, .report-actions, .report-download-status { display: none; }
+  .report-topic, .report-overview, .report-stats { break-inside: avoid; }
+  .report-topic-list { gap: 8px; }
+  .report-topic { padding: 10px; }
+  .report-index-ring, .report-topic-track, .report-topic-symbol { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}

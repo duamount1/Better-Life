@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "df6df704c8f364b936528ae1e1e22e47e4f0b274",
+  "title": "高性价比人生指南",
+  "count": 687,
+  "totalCards": 687,
+  "categoryCount": 34,
+  "categories": [
+    {
+      "id": "section-01",
+      "name": "不要早死",
+      "section": 1,
+      "count": 43,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/01-%E4%B8%8D%E8%A6%81%E6%97%A9%E6%AD%BB.md"
+    },
+    {
+      "id": "section-02",
+      "name": "不要慢慢死",
+      "section": 2,
+      "count": 44,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/02-%E4%B8%8D%E8%A6%81%E6%85%A2%E6%85%A2%E6%AD%BB.md"
+    },
+    {
+      "id": "section-03",
+      "name": "不要浪费精力",
+      "section": 3,
+      "count": 25,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/03-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E7%B2%BE%E5%8A%9B.md"
+    },
+    {
+      "id": "section-04",
+      "name": "不要浪费时间",
+      "section": 4,
+      "count": 18,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/04-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4.md"
+    },
+    {
+      "id": "section-05",
+      "name": "不要浪费钱",
+      "section": 5,
+      "count": 49,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/05-%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E9%92%B1.md"
+    },
+    {
+      "id": "section-06",
+      "name": "反面清单",
+      "section": 6,
+      "count": 31,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/06-%E5%8F%8D%E9%9D%A2%E6%B8%85%E5%8D%95.md"
+    },
+    {
+      "id": "section-07",
+      "name": "没钱的时候怎么活",
+      "section": 7,
+      "count": 22,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/07-%E6%B2%A1%E9%92%B1%E7%9A%84%E6%97%B6%E5%80%99%E6%80%8E%E4%B9%88%E6%B4%BB.md"
+    },
+    {
+      "id": "section-08",
+      "name": "别把自己搭进去：法律与财产安全",
+      "section": 8,
+      "count": 46,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/08-%E5%88%AB%E6%8A%8A%E8%87%AA%E5%B7%B1%E6%90%AD%E8%BF%9B%E5%8E%BB.md"
+    },
+    {
+      "id": "section-09",
+      "name": "普通人容易踩的法律红线",
+      "section": 9,
+      "count": 26,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/09-%E6%99%AE%E9%80%9A%E4%BA%BA%E5%AE%B9%E6%98%93%E8%B8%A9%E7%9A%84%E6%B3%95%E5%BE%8B%E7%BA%A2%E7%BA%BF.md"
+    },
+    {
+      "id": "section-10",
+      "name": "恋爱和结婚划不划算",
+      "section": 10,
+      "count": 21,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/10-%E6%81%8B%E7%88%B1%E5%92%8C%E7%BB%93%E5%A9%9A%E5%88%92%E4%B8%8D%E5%88%92%E7%AE%97.md"
+    },
+    {
+      "id": "section-11",
+      "name": "程序员和技术人容易踩的红线",
+      "section": 11,
+      "count": 19,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/11-%E7%A8%8B%E5%BA%8F%E5%91%98%E5%92%8C%E6%8A%80%E6%9C%AF%E4%BA%BA%E5%AE%B9%E6%98%93%E8%B8%A9%E7%9A%84%E7%BA%A2%E7%BA%BF.md"
+    },
+    {
+      "id": "section-12",
+      "name": "创业与做生意：别把家底赔进去",
+      "section": 12,
+      "count": 25,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/12-%E5%88%9B%E4%B8%9A%E4%B8%8E%E5%81%9A%E7%94%9F%E6%84%8F.md"
+    },
+    {
+      "id": "section-13",
+      "name": "紧急情况：先做什么",
+      "section": 13,
+      "count": 44,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/13-%E7%B4%A7%E6%80%A5%E6%83%85%E5%86%B5.md"
+    },
+    {
+      "id": "section-14",
+      "name": "账号与信息安全",
+      "section": 14,
+      "count": 10,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/14-%E8%B4%A6%E5%8F%B7%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8.md"
+    },
+    {
+      "id": "section-15",
+      "name": "租房与买房",
+      "section": 15,
+      "count": 15,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/15-%E7%A7%9F%E6%88%BF%E4%B8%8E%E4%B9%B0%E6%88%BF.md"
+    },
+    {
+      "id": "section-16",
+      "name": "得了慢性病之后怎么活",
+      "section": 16,
+      "count": 9,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/16-%E5%BE%97%E4%BA%86%E6%85%A2%E6%80%A7%E7%97%85%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E6%B4%BB.md"
+    },
+    {
+      "id": "section-17",
+      "name": "家里有老人",
+      "section": 17,
+      "count": 10,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/17-%E5%AE%B6%E9%87%8C%E6%9C%89%E8%80%81%E4%BA%BA.md"
+    },
+    {
+      "id": "section-18",
+      "name": "养孩子划不划算",
+      "section": 18,
+      "count": 6,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/18-%E5%85%BB%E5%AD%A9%E5%AD%90%E5%88%92%E4%B8%8D%E5%88%92%E7%AE%97.md"
+    },
+    {
+      "id": "section-19",
+      "name": "在职、离职和工伤",
+      "section": 19,
+      "count": 19,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/19-%E5%9C%A8%E8%81%8C%E7%A6%BB%E8%81%8C%E5%92%8C%E5%B7%A5%E4%BC%A4.md"
+    },
+    {
+      "id": "section-20",
+      "name": "刚出生的孩子怎么带",
+      "section": 20,
+      "count": 14,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/20-%E5%88%9A%E5%87%BA%E7%94%9F%E7%9A%84%E5%AD%A9%E5%AD%90%E6%80%8E%E4%B9%88%E5%B8%A6.md"
+    },
+    {
+      "id": "section-21",
+      "name": "出国、旅行与境外安全",
+      "section": 21,
+      "count": 11,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/21-%E5%87%BA%E5%9B%BD%E6%97%85%E8%A1%8C%E4%B8%8E%E5%A2%83%E5%A4%96%E5%AE%89%E5%85%A8.md"
+    },
+    {
+      "id": "section-22",
+      "name": "怎么放松：娱乐场所和减压",
+      "section": 22,
+      "count": 10,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/22-%E6%80%8E%E4%B9%88%E6%94%BE%E6%9D%BE.md"
+    },
+    {
+      "id": "section-23",
+      "name": "学什么技能划算",
+      "section": 23,
+      "count": 23,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/23-%E5%AD%A6%E4%BB%80%E4%B9%88%E6%8A%80%E8%83%BD%E5%88%92%E7%AE%97.md"
+    },
+    {
+      "id": "section-24",
+      "name": "看病：怎么少花钱少走弯路",
+      "section": 24,
+      "count": 12,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/24-%E7%9C%8B%E7%97%85.md"
+    },
+    {
+      "id": "section-25",
+      "name": "人走了以后要办什么",
+      "section": 25,
+      "count": 10,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/25-%E4%BA%BA%E8%B5%B0%E4%BA%86%E4%BB%A5%E5%90%8E%E8%A6%81%E5%8A%9E%E4%BB%80%E4%B9%88.md"
+    },
+    {
+      "id": "section-26",
+      "name": "做一个网站或平台：资质、备案和服务器",
+      "section": 26,
+      "count": 11,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/26-%E5%81%9A%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99%E6%88%96%E5%B9%B3%E5%8F%B0.md"
+    },
+    {
+      "id": "section-27",
+      "name": "怀孕和生产：从发现怀孕到出院办证",
+      "section": 27,
+      "count": 17,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/27-%E6%80%80%E5%AD%95%E5%92%8C%E7%94%9F%E4%BA%A7.md"
+    },
+    {
+      "id": "section-28",
+      "name": "别为了外形把身体搞坏",
+      "section": 28,
+      "count": 9,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/28-%E5%88%AB%E4%B8%BA%E4%BA%86%E5%A4%96%E5%BD%A2%E6%8A%8A%E8%BA%AB%E4%BD%93%E6%90%9E%E5%9D%8F.md"
+    },
+    {
+      "id": "section-29",
+      "name": "遭遇重大打击之后",
+      "section": 29,
+      "count": 13,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/29-%E9%81%AD%E9%81%87%E9%87%8D%E5%A4%A7%E6%89%93%E5%87%BB%E4%B9%8B%E5%90%8E.md"
+    },
+    {
+      "id": "section-30",
+      "name": "上学以后的孩子",
+      "section": 30,
+      "count": 18,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/30-%E4%B8%8A%E5%AD%A6%E4%BB%A5%E5%90%8E%E7%9A%84%E5%AD%A9%E5%AD%90.md"
+    },
+    {
+      "id": "section-31",
+      "name": "十八岁之后有哪几条路",
+      "section": 31,
+      "count": 16,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/31-%E5%8D%81%E5%85%AB%E5%B2%81%E4%B9%8B%E5%90%8E%E6%9C%89%E5%93%AA%E5%87%A0%E6%9D%A1%E8%B7%AF.md"
+    },
+    {
+      "id": "section-32",
+      "name": "出国留学：身份、打工、保险和回国认证",
+      "section": 32,
+      "count": 10,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/32-%E5%87%BA%E5%9B%BD%E7%95%99%E5%AD%A6.md"
+    },
+    {
+      "id": "section-33",
+      "name": "残疾之后怎么活",
+      "section": 33,
+      "count": 20,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/33-%E6%AE%8B%E7%96%BE%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E6%B4%BB.md"
+    },
+    {
+      "id": "section-34",
+      "name": "家里的常备药别吃出事",
+      "section": 34,
+      "count": 11,
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/book/34-%E5%AE%B6%E9%87%8C%E7%9A%84%E5%B8%B8%E5%A4%87%E8%8D%AF%E5%88%AB%E5%90%83%E5%87%BA%E4%BA%8B.md"
+    }
+  ],
+  "primarySourceLinkCount": 1818,
+  "upstreamSourceLinkMentionCount": 1831,
+  "evidenceCounts": {
+    "A": 450,
+    "B": 190,
+    "C": 47
+  },
+  "disputedCount": 73,
+  "pendingVerificationCount": 3,
+  "repository": "https://github.com/eternity4719/HowToLiveBetter",
+  "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter",
+  "upstreamCommit": "df6df704c8f364b936528ae1e1e22e47e4f0b274",
+  "upstreamCommittedAt": "2026-10-12T18:04:49+08:00",
+  "synchronizedOn": "2026-10-12",
+  "sourceDate": "2026-10-12",
+  "attribution": "卡片内容来自 eternity4719 的《高性价比人生指南》（HowToLiveBetter），依据 CC BY 4.0 许可使用。",
+  "modifications": "将原书每条建议转换为一张卡片；正面保留建议标题，背面使用「说人话」原文，保留成本、收益、证据等级、备注和来源；清除 Markdown 格式标记。未另行补写医学、法律或理财结论。",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "author": "eternity4719",
+    "sourceName": "高性价比人生指南",
+    "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter",
+    "textFile": "LICENSE-CC-BY-4.0"
+  },
+  "sourceNotice": "书里的内容可能过时，也可能有错。不少政策各地执行不一样。真去办事、看病、打官司时，以当地部门、医生和律师的说法为准。",
+  "evidenceNotice": "证据等级沿用原书。A 级表示数字或法规出处可查，不代表一定存在因果；百分比的适用人群和条件请结合收益、备注阅读。",
+  "coverage": "完整覆盖源版本 book/ 中的全部独立建议。README 中的导航、示例与 docs/ 长文不重复生成卡片；docs/核实记录属于原作者的核验记录，可由原文来源继续查看。",
+  "guides": [
+    {
+      "title": "做平台要办哪些证：对照表与选服务器的决策表",
+      "file": "docs/做平台要办哪些证.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E5%81%9A%E5%B9%B3%E5%8F%B0%E8%A6%81%E5%8A%9E%E5%93%AA%E4%BA%9B%E8%AF%81.md",
+      "relatedCardIds": [],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "刚确诊慢性病之后：头一周、头三个月和以后各做什么",
+      "file": "docs/刚确诊慢性病之后.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E5%88%9A%E7%A1%AE%E8%AF%8A%E6%85%A2%E6%80%A7%E7%97%85%E4%B9%8B%E5%90%8E.md",
+      "relatedCardIds": [
+        "book-29-002",
+        "book-16-001",
+        "book-02-012",
+        "book-01-007",
+        "book-05-012",
+        "book-16-007",
+        "book-16-009",
+        "book-06-019",
+        "book-02-004",
+        "book-02-003",
+        "book-16-003",
+        "book-24-005",
+        "book-16-002",
+        "book-05-013",
+        "book-16-006",
+        "book-02-009",
+        "book-02-011",
+        "book-02-019",
+        "book-02-020",
+        "book-16-004",
+        "book-06-010",
+        "book-34-001",
+        "book-34-003",
+        "book-16-005",
+        "book-16-008",
+        "book-01-020",
+        "book-24-001",
+        "book-24-002",
+        "book-24-003",
+        "book-24-004"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "孩子出生前后要办的事：按时间排的清单",
+      "file": "docs/孩子出生前后要办的事.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E5%AD%A9%E5%AD%90%E5%87%BA%E7%94%9F%E5%89%8D%E5%90%8E%E8%A6%81%E5%8A%9E%E7%9A%84%E4%BA%8B.md",
+      "relatedCardIds": [
+        "book-27-001",
+        "book-27-011",
+        "book-02-002",
+        "book-05-040",
+        "book-27-002",
+        "book-27-003",
+        "book-27-004",
+        "book-27-005",
+        "book-27-006",
+        "book-34-005",
+        "book-27-007",
+        "book-27-009",
+        "book-27-010",
+        "book-18-002",
+        "book-18-003",
+        "book-20-011",
+        "book-20-010",
+        "book-27-012",
+        "book-27-008",
+        "book-20-004",
+        "book-20-002",
+        "book-20-007",
+        "book-27-013",
+        "book-27-014",
+        "book-01-010",
+        "book-27-015",
+        "book-18-001",
+        "book-20-001",
+        "book-20-005",
+        "book-20-008",
+        "book-20-009",
+        "book-27-016",
+        "book-20-003",
+        "book-20-006",
+        "book-20-012",
+        "book-34-004",
+        "book-01-011",
+        "book-30-005",
+        "book-05-013",
+        "book-05-002"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "家庭应急装备清单：买什么、放哪里、多久检查一次",
+      "file": "docs/家庭应急装备清单.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E5%AE%B6%E5%BA%AD%E5%BA%94%E6%80%A5%E8%A3%85%E5%A4%87%E6%B8%85%E5%8D%95.md",
+      "relatedCardIds": [
+        "book-01-026",
+        "book-01-003",
+        "book-01-004",
+        "book-13-024",
+        "book-13-012",
+        "book-13-014",
+        "book-13-015",
+        "book-13-001",
+        "book-05-024"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "换工作、换城市之前：要算的几本账和要办的手续",
+      "file": "docs/换工作、换城市之前.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E6%8D%A2%E5%B7%A5%E4%BD%9C%E3%80%81%E6%8D%A2%E5%9F%8E%E5%B8%82%E4%B9%8B%E5%89%8D.md",
+      "relatedCardIds": [
+        "book-02-039",
+        "book-03-013",
+        "book-19-009",
+        "book-19-016",
+        "book-22-009",
+        "book-10-006",
+        "book-29-012",
+        "book-03-010",
+        "book-04-018",
+        "book-04-003",
+        "book-04-002",
+        "book-05-027",
+        "book-23-012",
+        "book-07-017",
+        "book-31-011",
+        "book-23-006",
+        "book-19-007",
+        "book-11-012",
+        "book-19-002",
+        "book-19-001",
+        "book-08-019",
+        "book-19-008",
+        "book-08-041",
+        "book-19-017",
+        "book-11-006",
+        "book-11-007",
+        "book-19-018",
+        "book-07-001",
+        "book-29-003",
+        "book-08-017",
+        "book-19-003",
+        "book-11-013",
+        "book-22-010",
+        "book-15-001",
+        "book-15-006",
+        "book-15-003",
+        "book-15-004",
+        "book-15-008",
+        "book-15-005",
+        "book-15-002",
+        "book-05-003",
+        "book-07-016",
+        "book-15-007",
+        "book-15-009",
+        "book-07-018",
+        "book-19-019",
+        "book-07-009",
+        "book-16-002",
+        "book-24-004",
+        "book-24-005",
+        "book-05-002"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "身体怎么认时间，夜班又为什么伤人",
+      "file": "docs/生物钟和夜班.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E7%94%9F%E7%89%A9%E9%92%9F%E5%92%8C%E5%A4%9C%E7%8F%AD.md",
+      "relatedCardIds": [
+        "book-02-039",
+        "book-03-002",
+        "book-02-038",
+        "book-02-013"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "结婚划不划算：把一笔糊涂账拆成五笔清楚账",
+      "file": "docs/结婚划不划算.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E7%BB%93%E5%A9%9A%E5%88%92%E4%B8%8D%E5%88%92%E7%AE%97.md",
+      "relatedCardIds": [
+        "book-10-018"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "被裁了之后先做什么",
+      "file": "docs/被裁了之后先做什么.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E8%A2%AB%E8%A3%81%E4%BA%86%E4%B9%8B%E5%90%8E%E5%85%88%E5%81%9A%E4%BB%80%E4%B9%88.md",
+      "relatedCardIds": [
+        "book-07-002",
+        "book-19-007",
+        "book-08-041",
+        "book-19-008",
+        "book-11-007",
+        "book-11-006",
+        "book-19-004",
+        "book-19-005",
+        "book-19-006",
+        "book-19-002",
+        "book-19-001",
+        "book-07-001",
+        "book-07-005",
+        "book-07-003",
+        "book-11-012",
+        "book-29-003",
+        "book-07-022",
+        "book-08-019",
+        "book-07-014",
+        "book-07-015",
+        "book-07-013",
+        "book-07-012",
+        "book-05-027",
+        "book-29-012",
+        "book-07-009",
+        "book-07-018",
+        "book-07-007",
+        "book-29-011"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    },
+    {
+      "title": "路上遇到陌生人出事，走开还是停下",
+      "file": "docs/遇到陌生人出事该不该停.md",
+      "sourceUrl": "https://github.com/eternity4719/HowToLiveBetter/blob/df6df704c8f364b936528ae1e1e22e47e4f0b274/docs/%E9%81%87%E5%88%B0%E9%99%8C%E7%94%9F%E4%BA%BA%E5%87%BA%E4%BA%8B%E8%AF%A5%E4%B8%8D%E8%AF%A5%E5%81%9C.md",
+      "relatedCardIds": [
+        "book-13-002",
+        "book-19-006",
+        "book-08-015",
+        "book-01-025",
+        "book-08-001",
+        "book-13-001",
+        "book-13-039"
+      ],
+      "coverage": "补充解释或按情境重排正文条目；作为延伸阅读，避免把同一条建议重复抽入牌组。"
+    }
+  ]
+}
