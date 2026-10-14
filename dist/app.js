@@ -459,6 +459,19 @@ $('report-nav').addEventListener('click', openCurrentReport);
 $('mobile-report-nav').addEventListener('click', openCurrentReport);
 $('about-button').addEventListener('click', () => $('about-dialog').showModal());
 $('close-about').addEventListener('click', () => $('about-dialog').close());
+function showWelcome() {
+  const welcome = $('welcome-dialog');
+  if (!welcome.open) welcome.showModal();
+}
+$('welcome-start').addEventListener('click', () => $('welcome-dialog').close());
+$('welcome-close').addEventListener('click', () => $('welcome-dialog').close());
+$('welcome-dialog').addEventListener('close', () => {
+  if (document.querySelector('dialog[open]')) return;
+  setActivePage('cards');
+  if (!openAutomaticReport(false) && ready && !$('flip-button').disabled) $('flip-button').focus({ preventScroll: true });
+});
+// A restored page does not re-run this module; present the intro on re-entry.
+addEventListener('pageshow', event => { if (event.persisted) showWelcome(); });
 for (const dialog of [$('atlas-dialog'), $('library-dialog'), $('about-dialog')]) {
   dialog.addEventListener('close', () => {
     if (!document.querySelector('dialog[open]')) { setActivePage('cards'); openAutomaticReport(false); }
@@ -492,6 +505,8 @@ async function init() {
     primaryControls.forEach(id => $(id).disabled = false); ready = true; $('nav-count').textContent = cards.length;
     const savedScope = persistence.getItem('life-cards:category');
     const topics = progress.summary().topics;
+    $('welcome-topic-count').textContent = topics.length;
+    $('welcome-card-count').textContent = cards.length;
     const topic = topics.find(t => t.id === savedScope || t.name === savedScope);
     selectScope(topic?.id || 'all', false);
     $('source-description').textContent = `收录正文 ${topics.length} 个主题、${cards.length} 条建议。`;
@@ -504,4 +519,5 @@ async function init() {
     primaryControls.forEach(id => $(id).disabled = true); ready = false; toast('加载失败，请刷新后再试。');
   }
 }
+showWelcome();
 init();
