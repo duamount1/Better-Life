@@ -1,6 +1,6 @@
 # 好好生活指南
 
-将 [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 的正文建议变成一张张生活闪卡。公开网页： 
+将 [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 的正文建议变成一张张生活闪卡。公开网页： https://duamount1.github.io/Better-Life/
 
 当前源版本 `df6df704c8f364b936528ae1e1e22e47e4f0b274`，整理日期 2026-10-12，共 34 个主题、687 条建议。正面是一个小提醒，背面保留原作「说人话」、完整备注、成本、收益、证据等级与来源。原作的争议、待核实和适用人群标签会显示在卡片上。延伸长文主要是正文的重排，保留在源快照中，不重复加入牌组。
 
