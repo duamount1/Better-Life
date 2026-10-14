@@ -27,6 +27,8 @@ const persistence = {
 };
 let cards = [], byId = new Map(), progress, deck, report, scope = 'all';
 let flipped = false, ready = false, favorites = new Set(), toastTimer, autoTimer;
+let flipAnimation = null, flipVersion = 0;
+const pendingFaceScrollResets = new Set();
 let libraryLimit = 40, resumeAfterReport = false;
 const pendingReports = new Map();
 const libraryOpenIds = new Set();
@@ -93,12 +95,55 @@ function returnToCards() {
   setActivePage('cards');
 }
 
-function setFlipped(value, focus = false) {
-  flipped = value; $('card-stage').classList.toggle('is-flipped', value);
-  $('card-front').inert = value; $('card-back').inert = !value;
+function showCardFace(value) {
+  $('card-stage').classList.toggle('is-flipped', value);
+  for (const [id, hidden] of [['card-front', value], ['card-back', !value]]) {
+    const face = $(id);
+    face.hidden = hidden;
+    face.inert = hidden;
+    face.setAttribute('aria-hidden', String(hidden));
+    // A hidden face has no scroll box; reset a new card only after reveal.
+    if (!hidden && pendingFaceScrollResets.delete(id)) face.querySelector('.front-content, .back-content').scrollTop = 0;
+  }
+}
+async function setFlipped(value, focus = false, animate = false) {
+  const version = ++flipVersion;
+  flipAnimation?.cancel();
+  flipAnimation = null;
+  flipped = value;
   $('flip-button').querySelector('span').textContent = value ? '翻回正面' : '翻开卡牌';
   if (focus) $('flip-button').focus({ preventScroll: true });
   resizeCard();
+  const inner = $('card-inner');
+  const visibleBack = $('card-stage').classList.contains('is-flipped');
+  if (!animate || value === visibleBack || matchMedia('(prefers-reduced-motion: reduce)').matches || typeof inner.animate !== 'function') {
+    showCardFace(value);
+    return;
+  }
+  // Paint one face at a time; switch at the narrow edge instead of relying
+  // on a mobile compositor to hide the reverse side of a 3D layer.
+  $('card-front').inert = true;
+  $('card-back').inert = true;
+  try {
+    flipAnimation = inner.animate([{ transform: 'scaleX(1)' }, { transform: 'scaleX(0)' }], { duration: 140, easing: 'ease-in', fill: 'forwards' });
+    await flipAnimation.finished;
+    if (version !== flipVersion) return;
+    showCardFace(value);
+    flipAnimation.cancel();
+    flipAnimation = inner.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 180, easing: 'ease-out', fill: 'forwards' });
+    await flipAnimation.finished;
+    if (version !== flipVersion) return;
+    flipAnimation.cancel();
+    flipAnimation = null;
+  } catch {
+    // A newer flip or a new card cancels the old animation. Only the newest
+    // request may settle the face; unsupported animations still show it.
+    if (version === flipVersion) {
+      flipAnimation?.cancel();
+      flipAnimation = null;
+      showCardFace(value);
+    }
+  }
 }
 function renderFlags(container, card) {
   container.replaceChildren();
@@ -228,8 +273,8 @@ function renderDecisions() {
   $('todo-button').replaceChildren(icon(todo ? 'check' : 'plus'), node('span', '', '加入todo'));
 }
 function renderCard() {
-  $('card-front').querySelector('.front-content').scrollTop = 0;
-  $('card-back').querySelector('.back-content').scrollTop = 0;
+  pendingFaceScrollResets.add('card-front');
+  pendingFaceScrollResets.add('card-back');
   setFlipped(false);
   const card = currentCard();
   $('card-stage').classList.toggle('is-empty', !card);
@@ -389,9 +434,9 @@ function openCurrentReport() {
   report.open({ reason: '当前探索进展', scopeName: scopeInfo().name });
 }
 
-$('card-front').addEventListener('click', () => { if (currentCard()) setFlipped(true, true); });
-$('back-flip').addEventListener('click', () => setFlipped(false, true));
-$('flip-button').addEventListener('click', () => { if (currentCard()) setFlipped(!flipped); });
+$('card-front').addEventListener('click', () => { if (currentCard()) setFlipped(true, true, true); });
+$('back-flip').addEventListener('click', () => setFlipped(false, true, true));
+$('flip-button').addEventListener('click', () => { if (currentCard()) setFlipped(!flipped, false, true); });
 $('next').addEventListener('click', handleNext);
 $('previous').addEventListener('click', () => { if (ready) { deck.previous(); renderCard(); } });
 $('favorite').addEventListener('click', () => toggleFavorite());
@@ -428,7 +473,7 @@ $('source-links').parentElement.addEventListener('toggle', resizeCard); addEvent
 new ResizeObserver(resizeCard).observe($('card-stage').parentElement);
 document.addEventListener('keydown', event => {
   if (!ready || document.querySelector('dialog[open]') || event.ctrlKey || event.metaKey || event.altKey || event.target.closest('input,textarea,select,[contenteditable="true"]')) return;
-  if (event.code === 'Space') { if (event.target.closest('button,a,summary')) return; event.preventDefault(); if (currentCard()) setFlipped(!flipped); }
+  if (event.code === 'Space') { if (event.target.closest('button,a,summary')) return; event.preventDefault(); if (currentCard()) setFlipped(!flipped, false, true); }
   else if (event.key === 'ArrowRight') { event.preventDefault(); handleNext(); }
   else if (event.key === 'ArrowLeft') { event.preventDefault(); if (deck.stats().canPrevious) { deck.previous(); renderCard(); } }
   else if (event.key.toLowerCase() === 's') { event.preventDefault(); toggleFavorite(); }
