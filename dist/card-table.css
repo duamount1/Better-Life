@@ -374,6 +374,31 @@ body.app-body {
   .card-stage .front-content h2.extra-long-title { font-size: 16px; }
 }
 
+/* Mobile-safe flip: only the active face is painted. app.js swaps it at
+   the midpoint of a two-part scale animation, without a 3D backface. */
+.card-stage .card-inner,
+.card-stage.is-flipped .card-inner {
+  transform: none;
+  transform-style: flat;
+  -webkit-transform-style: flat;
+  transition: none;
+}
+.card-stage .card-face {
+  transform: none;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+}
+.card-stage:not(.is-flipped) .card-back,
+.card-stage.is-flipped .card-front,
+.card-stage .card-face[hidden] {
+  display: none !important;
+  pointer-events: none;
+}
+.card-stage .front-content,
+.card-stage .back-content {
+  -webkit-overflow-scrolling: auto;
+}
+
 @media print {
   body.app-body { display: block; height: auto; }
   .site-header.app-sidebar, .mobile-tabs { display: none; }
