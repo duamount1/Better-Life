@@ -1,35 +1,9 @@
 # 好好生活指南
 
-将 [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 的正文建议变成一张张生活闪卡。公开网页： https://how-to-live-better-cards.duamont.chatgpt.site
+将 [eternity4719/HowToLiveBetter](https://github.com/eternity4719/HowToLiveBetter) 的正文建议变成一张张生活闪卡。公开网页： 
 
 当前源版本 `df6df704c8f364b936528ae1e1e22e47e4f0b274`，整理日期 2026-10-12，共 34 个主题、687 条建议。正面是一个小提醒，背面保留原作「说人话」、完整备注、成本、收益、证据等级与来源。原作的争议、待核实和适用人群标签会显示在卡片上。延伸长文主要是正文的重排，保留在源快照中，不重复加入牌组。
 
-## 发布到 GitHub Pages
-
-本项目是纯静态网页，已经提供完整的 `dist/` 文件和 `.github/workflows/pages.yml`，不需要安装依赖、构建、服务器或 API 密钥。
-
-1. 在 GitHub 新建一个 **Public** 仓库，默认分支使用 `main`。仓库名可使用 `how-to-live-better-cards`。
-2. 解压项目包，将 `how-to-live-better-github/` 文件夹**里面的文件**上传到仓库根目录。确保 `.github/workflows/pages.yml` 也一起上传；仓库根目录应直接看到 `README.md`、`package.json`、`dist/`、`scripts/`、`content/`、`tests/` 和 `.github/`，不要再套一层项目文件夹，也不要只上传 ZIP。
-3. 打开仓库 **Settings → Pages → Build and deployment**，将 **Source** 设为 **GitHub Actions**。
-4. 打开 **Actions → Deploy to GitHub Pages → Run workflow**，选择 `main` 并运行。发布成功后，在该工作流或 **Settings → Pages** 查看网站链接。
-
-之后每次向 `main` 提交修改，工作流会自动重新发布 `dist/`。如果使用其他分支，请同步修改 `pages.yml` 中的分支名。项目使用相对资源地址，支持 `https://用户名.github.io/仓库名/` 这样的仓库子路径。
-
-GitHub Free 的 Pages 适用于公开仓库。配置参考 [GitHub Pages 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。工作流只发布网站，不会自动创建仓库。
-
-## 上传源码的命令方式（可选）
-
-先在 GitHub 创建空仓库，然后进入解压后的项目文件夹，将下面的仓库地址换成自己的地址：
-
-```sh
-git init -b main
-git add .
-git commit -m "Publish 好好生活指南"
-git remote add origin https://github.com/你的用户名/你的仓库名.git
-git push -u origin main
-```
-
-再按上面的第 3、4 步启用 GitHub Pages。
 
 ## 使用
 
@@ -49,38 +23,7 @@ git push -u origin main
 - 好好生活指数 =（唯一看过比例 × 30% + 做到比例 × 70%）× 100，四舍五入到整数，仅记录卡片进展。
 - 快捷键：空格翻卡，左右方向键切换，S 收藏。
 
-## 本地运行
 
-无需安装依赖或构建。使用 Node 18+、Python 3.9+：
-
-```sh
-npm run dev
-```
-
-访问 http://127.0.0.1:4173 。`dist/` 可直接部署到任意静态托管服务。
-
-```sh
-npm test
-npm run sync
-python3 scripts/content_sync.py --refresh
-python3 scripts/package-source.py
-```
-
-`sync` 默认从 `content/source/` 的离线快照重新生成数据，`--refresh` 才读取上游新版本。重新生成后需重新发布。新增、删除卡片会安全重置对应主题的抽卡进度。公开网页中的「关于这副卡片」可下载数据与完整网页源码。
-
-## 文件
-
-- `dist/index.html`、`styles.css`、`app.js`：无框架网页。
-- `dist/deck-engine.js`、`progress-store.js`：随机牌组、互斥选择、累计统计和持久化。
-- `dist/themes.js`、`themes.css`：34主题皮肤与6个卡牌系列。
-- `dist/layout.css`：手机首屏、桌面精简布局、独立面板与卡内滚动。
-- `dist/card-table.css`：竖版卡牌、桌面侧边导航与纹理按钮。
-- `.github/workflows/pages.yml`：将 `dist/` 自动发布到 GitHub Pages。
-- `dist/report.js`、`report.css`：报告界面与SVG导出。
-- `dist/cards.json`、`source-meta.json`：卡片和来源元信息。
-- `content/source/`：固定上游版本的正文、延伸指南与许可证快照。
-- `scripts/content_sync.py`、`content-build.mjs`：可复现的内容同步与提取。
-- `tests/`：抽卡完整性、下一轮排除、恢复、状态互斥、旧版迁移、金标、报告去重与边界条件测试。
 
 ## 许可与归属
 
