@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#f3f0e7">
 <meta name="description" content="687 张生活闪卡、34 个主题皮肤。翻卡，记录选择，点亮图鉴，生成你的生活探索报告。">
-<title>好好生活 · 人生闪卡</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="themes.css"><link rel="stylesheet" href="report.css"><link rel="stylesheet" href="layout.css"><link rel="stylesheet" href="card-table.css"><script type="module" src="app.js"></script></head>
+<title>好好生活 · 人生闪卡</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="themes.css"><link rel="stylesheet" href="report.css"><link rel="stylesheet" href="layout.css"><link rel="stylesheet" href="card-table.css?v=20261014-welcome"><link rel="stylesheet" href="welcome.css?v=20261014-welcome"><script type="module" src="app.js?v=20261014-welcome"></script></head>
 <body class="app-body">
   <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
@@ -57,6 +57,19 @@
 <dialog id="atlas-dialog" class="panel-dialog atlas-dialog" aria-labelledby="atlas-title"><div class="dialog-heading"><div><h2 id="atlas-title">选择你的卡组 <span id="atlas-gold-count">0 / 34</span></h2></div><button class="icon-button" id="close-atlas" aria-label="返回好好生活指南"><svg><use href="#i-left"/></svg></button></div><div class="atlas-summary"><button class="all-scope active" id="all-scope" aria-pressed="true"><span class="all-emblem" aria-hidden="true">✦</span><span>全部主题<small id="atlas-total">687 张</small></span></button><p class="atlas-summary-text" id="atlas-summary-text">看过 0 张 · 已选 0 张</p></div><div class="atlas-grid" id="atlas-grid"></div></dialog>
 <dialog id="library-dialog" class="library-dialog"><div class="dialog-heading"><div><h2 id="library-title">我的生活卡册</h2></div><button class="icon-button" id="close-library" aria-label="返回好好生活指南"><svg><use href="#i-left"/></svg></button></div><div class="library-controls"><div class="search-wrap"><svg><use href="#i-search"/></svg><input id="library-search" type="search" placeholder="搜索一个生活问题或关键词" aria-label="搜索卡片"></div><select id="library-filter" aria-label="筛选卡片状态"><option value="all">全部卡片</option><option id="pending-filter-option" value="pending">未选择</option><option id="todo-filter-option" value="todo">todo</option><option id="done-filter-option" value="done">做到了</option><option id="declined-filter-option" value="declined">暂不采用</option><option id="saved-filter-option" value="saved">我的收藏</option></select></div><p class="library-count" id="library-count"></p><div id="library-list" class="library-list"></div></dialog>
 <dialog id="report-dialog" class="report-dialog"></dialog>
+<dialog id="welcome-dialog" class="welcome-dialog" aria-labelledby="welcome-title" aria-describedby="welcome-description">
+  <div class="welcome-heading"><span class="welcome-emblem" aria-hidden="true"><svg><use href="#i-sparkle"/></svg></span><button id="welcome-close" class="welcome-close" type="button" aria-label="关闭介绍"><svg aria-hidden="true"><use href="#i-close"/></svg></button></div>
+  <h2 id="welcome-title">好好生活 · 人生闪卡</h2>
+  <div id="welcome-description" class="welcome-content" tabindex="0" aria-label="介绍内容，可向下滚动">
+    <ul class="welcome-points">
+      <li>每张闪卡都是一条生活建议，共有 <strong><span id="welcome-topic-count">34</span> 个主题、<span id="welcome-card-count">687</span> 条建议</strong>。帮你减少信息差，发现那些平时没关注、却可能很重要的人生小妙招！</li>
+      <li>内容改编自 eternity4719 的开源项目《<a href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener noreferrer">HowToLiveBetter</a>》，汇集期刊论文、官方资料和经验建议，探索提高生活质量的可能。</li>
+    </ul>
+    <p class="welcome-caution"><em>部分信息可能过时或有误，适用情况也因人而异，请结合来源和自身情况判断。</em></p>
+    <p class="welcome-invitation">一起来收集闪卡，慢慢好好生活吧～👏</p>
+  </div>
+  <footer class="welcome-actions"><button id="welcome-start" class="welcome-start" type="button" autofocus>开始翻卡 <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><a class="welcome-source" href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener noreferrer">查看原项目 <svg aria-hidden="true"><use href="#i-external"/></svg></a></footer>
+</dialog>
   <dialog id="about-dialog" class="about-dialog"><div class="dialog-heading"><h2>关于这副卡片</h2><button class="icon-button" id="close-about" aria-label="返回好好生活指南"><svg><use href="#i-left"/></svg></button></div><div class="about-content"><p>原作是 eternity4719 与社区贡献者维护的 <a href="https://github.com/eternity4719/HowToLiveBetter" target="_blank" rel="noopener noreferrer">HowToLiveBetter 高性价比人生指南</a>。这里将正文中每条建议拆成独立闪卡，保留「说人话」、备注、成本、收益、证据等级和来源，改变了展示方式。</p><p id="source-description"></p><p>每个主题都有独立的抽卡进度。可以选择暂不采用、做到了，或加入 todo。todo 记录待办；做到了与暂不采用的卡片在下轮跳过。该主题全部卡片都标记为做到了或暂不采用后，图鉴金标点亮。回看与收藏不改变本轮覆盖数。</p><p>证据等级沿用原作：A 为有具体数字可查的荟萃分析、大型队列或随机试验；法律政策条目表示引用到法条或官方原文，可核查不等于因果。B 为有研究支持但没有确切数字，或只有小样本、单项研究。C 为作者经验或公认做法，缺少直接研究文献。原作的「争议」和「待核实」标记会单独显示。</p><p>内容依据 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> 改编。<a href="CONTENT-LICENSE.txt" target="_blank" rel="noopener noreferrer">查看内容许可</a> · <a href="cards.json" download>下载全部卡片数据</a> · <a href="life-flashcards-source.zip" download>下载网页源码</a></p><p class="about-muted">进度、选择、收藏和报告名字只保存在此浏览器。清除浏览器数据后会重置。好好生活指数 =（看过比例 × 30% + 做到比例 × 70%）× 100，只记录卡片进展。</p><p id="storage-note">选择、进度、收藏与报告名字，自动保存在此浏览器。</p><p>快捷键：空格翻卡，左右方向键切换，S 收藏。</p></div></dialog>
 
 
